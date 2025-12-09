@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 
 	"github.com/franciscocunha55/kubernetes-mcp-server/tools"
@@ -18,6 +17,7 @@ func main() {
 	)
 
 	mcpServer.AddTool(tools.ToolHelloWorld, tools.HelloHandler)
+	mcpServer.AddTool(tools.ToolListNamespaces, tools.ListNamespacesHandler)
 
 	streamableHTTPServer := server.NewStreamableHTTPServer(mcpServer)
 	log.Printf("Starting MCP server on HTTP at port :8080...")
