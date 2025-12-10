@@ -20,4 +20,3 @@ func GetClientSet() (*kubernetes.Clientset, error) {
 	}
 	return kubernetes.NewForConfig(config)
 }
-
